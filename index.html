@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>BANK</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="main container">
+				<!-- Login Section  -->
+				<div class="login__section mt-5 d-block" id="login__section">
+					<div class="heading text-center">
+						<h1>Welcome To Our Bank</h1>
+					</div>
+					<div class="submit__section p-5 shadow mt-5">
+						<h3>Login</h3>
+						<input type="text" class="form-control" placeholder="Email" />
+						<input
+							type="password"
+							class="form-control my-3"
+							placeholder="Password"
+						/>
+						<button id="login__submit" class="btn btn-success">Login</button>
+					</div>
+				</div>
+				<!-- Login Section End -->
+				<!-- Account Section -->
+				<div class="account__section d-none mt-5">
+					<div class="heading text-center mb-5">
+						<h1>Welcome To Our Bank</h1>
+					</div>
+					<!-- Account status section -->
+					<div class="status">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="status__card bg-success p-5 text-white rounded-3">
+									<h3>Deposit</h3>
+									<h1>$ <span id="deposit__show">00</span></h1>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="status__card bg-info p-5 text-white rounded-3">
+									<h3>Withdraw</h3>
+									<h1>$ <span id="withdraw__show">000</span></h1>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="status__card bg-warning p-5 text-white rounded-3">
+									<h3>Balance</h3>
+									<h1>$ <span id="balance__show">1200</span></h1>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- deposit and withdraw section -->
+					<div class="row">
+						<div class="col-md-6">
+							<div class="submit__section p-5 shadow mt-5">
+								<h3>Deposit</h3>
+								<input
+									id="deposit__amount"
+									type="text"
+									class="form-control my-4"
+									placeholder="How much you want to deposit"
+								/>
+								<button id="deposit__btn" class="btn btn-success">
+									Deposit
+								</button>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="submit__section p-5 shadow mt-5">
+								<h3>Withdraw</h3>
+								<input
+									id="withdraw__amount"
+									type="text"
+									class="form-control my-4"
+									placeholder="How much you want to deposit"
+								/>
+								<button id="withdraw__btn" class="btn btn-success">
+									Withdraw
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Account Section End -->
+				<!-- ! Spinner  -->
+				<div class="d-none justify-content-center" id="spinner">
+					<div class="spinner-border" role="status">
+						<span class="visually-hidden">Loading...</span>
+					</div>
+				</div>
+				<!-- !Main class -->
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
