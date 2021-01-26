@@ -15,8 +15,13 @@ const spinnerShow = () => {
 // String to number & Rest Input Section
 const stringToNumber = (numberID) => {
 	let number = parseFloat(document.querySelector(numberID).value);
-	document.querySelector(numberID).value = '';
-	return number;
+	if (!isNaN(number)) {
+		document.querySelector(numberID).value = '';
+		return number;
+	} else {
+		console.log("Your Number Can't be Zero");
+		return 0;
+	}
 };
 
 // Reset Input Section {id need }
